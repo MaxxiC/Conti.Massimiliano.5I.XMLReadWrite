@@ -1,0 +1,23 @@
+﻿@model List<Persona>
+@{
+    ViewBag.Title = "Index";
+}
+
+<center>
+    <h1> XML Read-Write </h1>
+    <a href="/Default/Index">
+        HOME
+    </a>
+</center>
+
+<table class="table table-bordered">
+    @foreach (Persona m in Model)
+    {
+        <tr>
+            <td>@m.Nome_C</td>
+            <td>@m.Cognome_C</td>
+            <td>@m.Number_C</td>
+            <td>@m.Indirizzo_C</td>
+        </tr>
+    }
+</table>

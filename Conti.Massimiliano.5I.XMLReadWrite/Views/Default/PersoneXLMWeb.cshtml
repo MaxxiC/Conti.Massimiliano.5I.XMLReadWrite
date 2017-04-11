@@ -1,0 +1,30 @@
+﻿@model List<Persona>
+@{
+    ViewBag.Title = "Index";
+}
+
+<center>
+    <h1> PersoneXLMWeb </h1>
+    <a href="/Default/Index">
+        HOME
+    </a>
+</center>
+
+<table class="table" align="center">
+    <tr>
+        <th>Nome</th>
+        <th>Cognome</th>
+        <th>Indirizzo</th>
+        <th>Cellulare</th>
+    </tr>
+
+    @foreach (Persona pers in @Model)
+    {
+        <tr>
+            <td>@pers.Nome_C</td>
+            <td>@pers.Cognome_C</td>
+            <td>@pers.Indirizzo_C</td>
+            <td>@pers.Number_C</td>
+        </tr>
+    }
+</table>
